@@ -10,7 +10,7 @@ import odoo.addons.decimal_precision as dp
 from odoo.exceptions import UserError
 
 class ConfigTimbre(models.Model):
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _inherit = ['mail.thread']
     _name='config.timbre'
     _description='Fiscal Timbre configuration'
 

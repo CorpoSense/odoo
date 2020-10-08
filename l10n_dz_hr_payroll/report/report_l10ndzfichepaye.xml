@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 <template id="report_l10ndzfichepaye">
-    <t t-call="report.html_container">
+    <t t-call="web.html_container">
         <t t-foreach="docs" t-as="o">
-            <t t-call="report.internal_layout">
+            <t t-call="web.internal_layout">
                 <div class="page" style="font-size:11px">
                     <div class="oe_structure"/>
                     <div class="row">
@@ -143,7 +143,7 @@
                                 <tr>
                                     <td>
                                         <div class="pull-right" style="font-size:15px">         
-                                        <strong>Net à payer </strong>: <span t-esc="get_total_by_rule_category(o, 'TOTAL')" t-esc-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
+                                        <strong>Net à payer </strong>: <span t-esc="get_total_by_rule_category(o, 'TOTAL')" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
                                         </div>
                                         <div class="mt15">
                                              <strong></strong>

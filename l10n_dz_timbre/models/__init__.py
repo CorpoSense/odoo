@@ -3,9 +3,9 @@
 #
 # Copyright (c) 2016  - Osis - www.osis-dz.net
 
-import timbre
-import payment_term
-import sale_invoice
+from . import timbre
+from . import payment_term
+from . import sale_invoice
 
 
 

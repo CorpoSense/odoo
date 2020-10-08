@@ -21,9 +21,9 @@ def _convert_nn_fr(val):
         if dval + 10 > val:
             if val % 10:
                 if dval == 70 or dval == 90:
-                    return tens_fr[dval / 10 - 3] + '-' + to_19_fr[val % 10 + 10]
+                    return tens_fr[int(dval / 10 - 3)] + '-' + to_19_fr[int(val % 10 + 10)]
                 else:
-                    return dcap + '-' + to_19_fr[val % 10]
+                    return dcap + '-' + to_19_fr[int(val % 10)]
             return dcap
 
 def _convert_nnn_fr(val):
@@ -71,7 +71,7 @@ def amount_to_text_fr(numbers, currency):
     start_word = french_number(abs(int(liste[0])))
     end_word = french_number(int(liste[1]))
     cents_number = int(liste[1])
-    cents_name = (cents_number > 1) and ' Centimes' or ' Centime'
+    cents_name = (cents_number > 1) and 'Centimes' or 'Centime'
     final_result = start_word + ' ' + units_name + ' ' + end_word + ' ' + cents_name
     return final_result
 

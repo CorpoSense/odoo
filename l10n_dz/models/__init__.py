@@ -3,4 +3,4 @@
 #
 # Copyright (c) 2016  - Osis - www.osis-dz.net
 
-import l10n_dz
+from . import l10n_dz

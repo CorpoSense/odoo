@@ -3,6 +3,6 @@
 #
 # Copyright (c) 2016  - Osis - www.osis-dz.net
 
-import models
-import report
-import reports
+from . import models
+from . import report
+from . import reports

@@ -3,4 +3,4 @@
 #
 # Copyright (c) 2016  - Osis - www.osis-dz.net
 
-import report_l10ndzfichepaye
+from . import report_l10ndzfichepaye

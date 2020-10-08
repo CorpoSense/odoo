@@ -21,13 +21,11 @@ This module applies to companies based in Algeria.
     "license": "AGPL-3",
     'depends': ['l10n_dz'],
     'data': [
-
-	'data/timbre_data.xml',
+	    'data/timbre_data.xml',
         'security/ir.model.access.csv',
-	'views/timbre_view.xml',
-	'views/sale_invoice_view.xml'	,
-	'views/account_view.xml',
-
+        'views/timbre_view.xml',
+        'views/sale_invoice_view.xml'	,
+        'views/account_view.xml'
     ],
 
     'installable': True,

@@ -1,35 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-
-     <record id="view_hr_payroll_configuration_l10n_dz_payroll" model="ir.ui.view">
-            <field name="name">Configure Payroll l10n_dz_payroll</field>
-            <field name="model">account.config.settings</field>
-            <field name="inherit_id" ref="account.view_account_config_settings"/>
+<data>
+    <record id="view_hr_l10n_dz_payroll_configuration" model="ir.ui.view">
+            <field name="name">view.hr.l10n_dz_payroll.config</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="hr_payroll.res_config_settings_view_form"/>
             <field name="arch" type="xml">
-                   <xpath expr="//group[@name='followup']" position="before">
-                        <group string="Paie">
-                            <label for="hours"/>
-                            <div>
-                                <field name="hours" class="oe_inline"/>
+                 <xpath expr="//div[@id='hr_payroll_localization']" position="before">
+                     
+                     <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="hours" class="o_form_label" />
+                                <field name="hours" class="oe_inline" />
                             </div>
-                            <label for="nombre_employes"/>
-                            <div>
-                                <field name="days" class="oe_inline"/> Jours de travail
-                                <field name="leave" class="oe_inline"/> Congé
+                        </div>
+                    </div>
+                            
+                    <div class="row o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <div class="text-muted">Nombre de jours</div>
+                                <field name="days" class="oe_inline"/> Jour(s) de travail
+                                <field name="leave" class="oe_inline"/> Jour(s) Congé
                             </div>
-                            <label for="director_id"/>
-                            <div>
+                        </div>
+                    </div>
+
+                    <div class="row o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="director_id"/>
                                 <field name="director_id" class="oe_inline"/>
                             </div>
-                            <label for="imm_ss"/>
-                            <div>
+                        </div>
+                    </div>
+
+                    <div class="row o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="imm_ss"/>
                                 <field name="imm_ss" class="oe_inline"/>
                             </div>
-                        </group>
-                    </xpath>
+                        </div>
+                    </div>
+                    
+                </xpath>               
             </field>
         </record>
-
     </data>
+
 </odoo>

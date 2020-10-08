@@ -26,7 +26,7 @@ class HrEmployee(models.Model):
 
     @api.model
     def name_search(self, name, args=None, operator='ilike', limit=80):
-        """ Returns a list of tupples containing id, name, as internally it is called {def name_get}
+        """ Returns a list of tuples containing id, name, as internally it is called {def name_get}
             result format: {[(id, name), (id, name), ...]}
         """
         args = args or []
@@ -37,11 +37,11 @@ class HrEmployee(models.Model):
         name = self.search(expression.AND([domain, args]), limit=limit)
         return name.name_get()
 
-    first_name = fields.Char('First name', required=True)
+    first_name = fields.Char('First name', required=False)#required=True)
     matricule  = fields.Char('Registration number')
 
     address_home = fields.Char('Personal Address')
-    housewife  =  fields.Boolean('housewife')
+    housewife  =  fields.Boolean('Housewife')
     maiden_name = fields.Char('Maiden name')
 
     ss = fields.Boolean('Contributes to cnas ?', default=True)

@@ -8,7 +8,7 @@ from odoo import fields, models
 
 
 class AccountConfigSettings(models.TransientModel):
-    _inherit = 'account.config.settings'
+    _inherit = 'res.config.settings'
 
     hours = fields.Float(related='company_id.hours', string='Nombre Heures *')
     days = fields.Integer(related='company_id.days', string='Nombre Jours *')

@@ -5,7 +5,7 @@
 
 {
     'name': 'Algeria - Amount to Text',
-    'version': '0.2',
+    'version': '0.3',
     'category': 'Accounting',
     'description': """
 This is the module print amount to Text with fiscal timbre.

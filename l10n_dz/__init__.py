@@ -3,4 +3,4 @@
 #
 # Copyright (c) 2016  - Osis - www.osis-dz.com
 
-import models
+from . import models

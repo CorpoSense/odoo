@@ -9,8 +9,8 @@
             file="l10n_dz_hr_payroll.report_l10ndzfichepaye"
         />
 
-        <record id="action_report_report_l10ndzfichepaye" model="ir.actions.report.xml">
-            <field name="paperformat_dz_id" ref="l10n_dz_hr_payroll.paperformat_dz"/>
+        <record id="action_report_report_l10ndzfichepaye" model="ir.actions.report">
+            <field name="paperformat_id" ref="l10n_dz_hr_payroll.paperformat_dz"/>
         </record>
 
 </odoo>

@@ -4,7 +4,7 @@
 
 {
     'name': 'Algeria - Payroll',
-    'version': '0.4',
+    'version': '11.0.1.0.4',
     'license': 'AGPL-3',
     'category': 'Localization',
     'description': """
@@ -23,18 +23,20 @@ http://www.slideshare.net/yacinebensidhoum/paie-algrienne-odoo
 """,
     'author': 'Osis',
     'website': 'http://www.osis.dz/',
-    'depends': ['hr_payroll', 'l10n_dz', 'smile_decimal_precision'],
+    'depends': [
+        'hr_payroll', 
+        'l10n_dz', 
+        'smile_decimal_precision'
+    ],
     'data': [
-
         'security/ir.model.access.csv',
         'data/l10n_dz_hr_payroll_data.xml',
-    	'views/l10n_dz_hr_payroll_config_settings_views.xml',
     	'views/hr_empolyee_view.xml',
     	'views/hr_payroll_view.xml',
+    	'views/l10n_dz_hr_payroll_config_settings_views.xml',
         'report/report_l10ndzfichepaye.xml',
         'report/l10n_dz_hr_payroll_report.xml',
 	'reports/hr_payslip_report_view.xml',
-        'views/l10n_dz_hr_payroll_config_settings_views.xml',
     ],
 
     'demo': ['demo/l10n_dz_hr_payroll_demo.xml'],

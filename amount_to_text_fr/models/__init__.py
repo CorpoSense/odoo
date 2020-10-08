@@ -3,4 +3,4 @@
 #
 # Copyright (c) 2016  - Osis - www.osis-dz.net
 
-import amount_to_text_fr
+from . import amount_to_text_fr

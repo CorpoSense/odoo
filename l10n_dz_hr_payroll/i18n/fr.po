@@ -647,8 +647,8 @@ msgstr "Wrong quantity defined for salary rule %s (%s)."
 
 #. module: l10n_dz_hr_payroll
 #: model:ir.model,name:l10n_dz_hr_payroll.model_account_config_settings
-msgid "account.config.settings"
-msgstr "account.config.settings"
+msgid "res.config.settings"
+msgstr ""
 
 #. module: l10n_dz_hr_payroll
 #: model:ir.ui.view,arch_db:l10n_dz_hr_payroll.report_l10ndzfichepaye

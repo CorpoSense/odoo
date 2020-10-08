@@ -3,4 +3,4 @@
 #
 # Copyright (c) 2016  - Osis - www.osis-dz.net
 
-import hr_payslip_report
+from . import hr_payslip_report
