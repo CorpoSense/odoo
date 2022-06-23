@@ -7,6 +7,7 @@
 import logging
 import locale
 import decimal
+
 import odoo
 from odoo import api, fields, models, tools, _
 from odoo.tools.safe_eval import safe_eval
@@ -27,22 +28,15 @@ class HrPayslip(models.Model):
     @api.multi
     def compute_sheet(self):
         payslip_line_obj = self.env['hr.payslip.line']
-        #payslips = self.env['hr.payslip']
-        #for payslip in payslips:
         for payslip in self:
             number = payslip.number or self.env['ir.sequence'].next_by_code('salary.slip')
             #delete old payslip lines
-            #line = payslip_line_obj.search([('slip_id','=', payslip.id)])
-            #line.unlink()
-            payslip.line_ids.unlink()
+            line = payslip_line_obj.search([('slip_id','=', payslip.id)])
+            line.unlink()
             # set the list of contract for which the rules have to be applied
             # if we don't give the contract, then the rules to apply should be for all current contracts of the employee
             contract_ids = payslip.contract_id.ids or self.get_contract(payslip.employee_id, payslip.date_from, payslip.date_to)
             lines = [(0, 0, line) for line in self._get_payslip_lines(contract_ids, payslip.id)]
-            #lines = []
-            #payslip_lines = self._get_payslip_lines(contract_ids, payslip.id)
-            #_logger.info('********* payslip_lines')
-            #_logger.info(payslip_lines)
             payslip.write({'line_ids': lines, 'number': number})
         return True
 

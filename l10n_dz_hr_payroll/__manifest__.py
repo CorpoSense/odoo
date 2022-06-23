@@ -36,7 +36,7 @@ http://www.slideshare.net/yacinebensidhoum/paie-algrienne-odoo
     	'views/l10n_dz_hr_payroll_config_settings_views.xml',
         'report/report_l10ndzfichepaye.xml',
         'report/l10n_dz_hr_payroll_report.xml',
-	'reports/hr_payslip_report_view.xml',
+	    'reports/hr_payslip_report_view.xml',
     ],
 
     'demo': ['demo/l10n_dz_hr_payroll_demo.xml'],

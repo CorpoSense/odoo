@@ -9,7 +9,7 @@
 			<field name="arch" type="xml">
 				<data>
 
-				<xpath expr="//div/div[@class='row']" position="replace">
+				<xpath expr="//div/div[hasclass('row')]" position="replace">
 					<div class="row">
 						<div name="invoice_address" class="col-xs-5 col-xs-offset-7">
 							<address t-field="o.partner_id"
@@ -26,7 +26,7 @@
 					</div>
 				</xpath>
 
-					<xpath expr="//div/div/table[@class='table table-condensed']" position="replace">
+					<xpath expr="//div/div/table[hasclass('table','table-condensed')]" position="replace">
 							<table class="table table-condensed">
 								<tr class="border-black">
 								    <td><strong>HT</strong></td>

@@ -21,9 +21,9 @@ def _convert_nn_fr(val):
         if dval + 10 > val:
             if val % 10:
                 if dval == 70 or dval == 90:
-                    return tens_fr[dval / 10 - 3] + '-' + to_19_fr[val % 10 + 10]
+                    return tens_fr[int(dval / 10 - 3)] + '-' + to_19_fr[int(val % 10 + 10)]
                 else:
-                    return dcap + '-' + to_19_fr[val % 10]
+                    return dcap + '-' + to_19_fr[int(val % 10)]
             return dcap
 
 def _convert_nnn_fr(val):
@@ -71,7 +71,7 @@ def amount_to_text_fr(numbers, currency):
     start_word = french_number(abs(int(liste[0])))
     end_word = french_number(int(liste[1]))
     cents_number = int(liste[1])
-    cents_name = (cents_number > 1) and ' Centimes' or ' Centime'
+    cents_name = (cents_number > 1) and 'Centimes' or 'Centime'
     final_result = start_word + ' ' + units_name + ' ' + end_word + ' ' + cents_name
     return final_result
 
@@ -79,9 +79,9 @@ class AccountInvoice(models.Model):
     _inherit = "account.invoice"
    
     @api.one
-    @api.depends('amount_total')
+    @api.depends('amount_timbre','payment_term_id')
     def _amount_in_words(self):
-        self.amount_to_text = amount_to_text_fr(self.amount_total, self.currency_id.symbol)
+        self.amount_to_text = amount_to_text_fr(self.amount_timbre, self.currency_id.symbol)
 
     amount_to_text = fields.Text(string='In Words',
         store=True, readonly=True, compute='_amount_in_words')
@@ -90,9 +90,9 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     @api.one
-    @api.depends('amount_total')
+    @api.depends('amount_timbre','payment_term_id')
     def _amount_in_words(self):
-        self.amount_to_text = amount_to_text_fr(self.amount_total, self.pricelist_id.currency_id.symbol)
+        self.amount_to_text = amount_to_text_fr(self.amount_timbre, self.pricelist_id.currency_id.symbol)
     
     
     amount_to_text = fields.Text(string='In Words',

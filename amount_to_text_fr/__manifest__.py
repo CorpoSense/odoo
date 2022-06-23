@@ -5,7 +5,7 @@
 
 {
     'name': 'Amount to Text',
-    'version': '0.3',
+    'version': '11.0.1.0.3',
     'category': 'Accounting',
     'description': """
 This is the module print amount to Text .

@@ -7,6 +7,7 @@
     'version': '1.1',
     'license': 'AGPL-3',
     'category': 'Localization',
+    'version': '11.0.1.0.0',
     'description': """
 This is the module to manage the accounting chart for Algeria in Odoo.
 ========================================================================

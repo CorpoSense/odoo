@@ -14,6 +14,7 @@ and display digits in decimal precision.
 """,
     "website": "http://www.smile.fr",
     "category": "Hidden/Dependency",
+    'version': '11.0.1.0.0',
     "sequence": 32,
     "data": [
         "views/decimal_precision_view.xml",

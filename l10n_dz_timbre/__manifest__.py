@@ -5,7 +5,7 @@
 
 {
     'name': 'Algeria - Fiscal Timbre ',
-    'version': '0.3',
+    'version': '11.0.1.0.3',
     'category': 'Localization',
     'description': """
 This is the module to manage the Fiscal Timbre in Odoo.
