@@ -20,7 +20,7 @@
 
 {
     'name': 'Algeria - Regions',
-    'version': '11.0.1.0.0',
+    'version': '11.0.1.0.1',
     'description': """Adds extra functionality and configuration to Odoo """,
     'summary': 'Regions of Algeria',
     'author': 'version 10.0 d\'Osis, modifié par Ludovic Dessemon, CorpoSense pour Odoo 11.0',
@@ -35,6 +35,6 @@
         'security/ir.model.access.csv',
         'data/wilaya.xml',
         'data/commune.xml',
-	    'views/res_commune.xml'
+        'views/res_commune.xml'
     ]
 }
